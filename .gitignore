@@ -1,0 +1,35 @@
+# Compiled Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lib
+*.a
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Temporary files
+*.swp
+*~
+\#*\#
+
+# Dependency files
+*.d
+
+# Build directories
+/build/
+/bin/
