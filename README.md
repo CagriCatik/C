@@ -1,35 +1,35 @@
 # C for Beginners
 
-## Introduction
+## [1. Introduction](link)
 
-## Starting to write the code
+## [2. Starting to write the code](link)
 
-## Basic Concepts
+## [3. Basic Concepts](link)
 
-## Variables and Data Types
+## [4. Variables and Data Types](link)
 
-## Operators
+## [5. Operators](link)
 
-## Control Flow
+## [6. Control Flow](link)
 
-## Arrays
+## [7. Arrays](link)
 
-## Functions
+## [8. Functions](link)
 
-## Character Strings
+## [9. Character Strings](link)
 
-## Debugging
+## [10. Debugging](link)
 
-## Pointer Basics
+## [11. Pointer Basics](link)
 
-## Utilizing Pointers
+## [12. Utilizing Pointers](link)
 
-## Pointer Aritmetic
+## [13. Pointer Arithmetic](link)
 
-## Dynamic Memory Allocation
+## [14. Dynamic Memory Allocation](link)
 
-## Structures
+## [15. Structures](link)
 
-## File Input and Output
+## [16. File Input and Output](link)
 
-## Standard C Library
+## [17. Standard C Library](link)
