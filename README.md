@@ -1,8 +1,9 @@
-# C Programming for Beginners
+
+# 📘 C Programming for Beginners 🖥️
 
 This introductory guide, "C for Beginners," is designed to equip you with the fundamental knowledge and skills needed to start your journey into the realm of programming using the C language. Throughout this guide, we will cover a wide range of topics, starting from the basic concepts of programming to more advanced techniques. Whether you're completely new to programming or looking to expand your skills, this resource will provide you with a solid foundation in C programming.
 
-## [1. Introduction](link)
+## [1. Introduction](link) 💡
 
 - First C program
 - Building/Compiling
@@ -13,7 +14,7 @@ This introductory guide, "C for Beginners," is designed to equip you with the fu
 - Logic Errors
 - Structure of a C Program
 
-## [2. Basic Concepts](link)
+## [2. Basic Concepts](link) 📝
 
 - Comments
 - Preprocessor
@@ -21,7 +22,7 @@ This introductory guide, "C for Beginners," is designed to equip you with the fu
 - Displaying Output
 - Reading input from the terminal
 
-## [3. Variables and Data Types](link)
+## [3. Variables and Data Types](link) 🔢
 
 - Overview
 - Basic Data Types
@@ -30,15 +31,15 @@ This introductory guide, "C for Beginners," is designed to equip you with the fu
 - Format Specifiers
 - Command Line Arguments
 
-## [4. Operators](link)
+## [4. Operators](link) ➕
 
-- Overvies
+- Overview
 - Basic Operators
-- Bitweise Operators
+- Bitwise Operators
 - The Cast and sizeof Operators
 - Operator Precedence
 
-## [5. Control Flow](link)
+## [5. Control Flow](link) 🔄
 
 - Overview
 - If Statements
@@ -47,14 +48,14 @@ This introductory guide, "C for Beginners," is designed to equip you with the fu
 - While and Do-While
 - Nested Loops and Loop Controls
 
-## [6. Arrays](link)
+## [6. Arrays](link) 📚
 
 - Creating and Using Arrays
 - Initialization
 - Multidimensional Arrays
 - Variable Length Arrays
 
-## [7. Functions](link)
+## [7. Functions](link) 🎛️
 
 - Basics
 - Defining Functions
@@ -62,20 +63,75 @@ This introductory guide, "C for Beginners," is designed to equip you with the fu
 - Returning Data from Functions
 - Local and Global Variables
 
-## [8. Character Strings](link)
+## [8. Character Strings](link) 🔤
 
-## [9. Debugging](link)
+- Overview
+- Defining a String
+- Constant Strings
+- Common String Functions
+- Searching, Tokenizing, and Analyzing Strings
+- Converting Strings
 
-## [10. Pointer Basics](link)
+## [9. Debugging](link) 🔍
 
-## [11. Utilizing Pointers](link)
+- Configuring the Debugger in VS Code
+- What is Debugging?
+- Understanding the Call Stack
+- VS Code Debugger
+- Common C Mistakes
+- Understanding Compiler Errors
 
-## [12. Pointer Arithmetic](link)
+## [10. Pointer Basics](link) 🔗
 
-## [13. Dynamic Memory Allocation](link)
+- Overview
+- Defining Pointers
+- Accessing Pointers
 
-## [14. Structures](link)
+## [11. Utilizing Pointers](link) 🔍
 
-## [15. File Input and Output](link)
+- Overview
+- Pointers and const
+- void pointers
+- Pointers and arrays
+- Passing pointers to a function
 
-## [16. Standard C Library](link)
+## [12. Pointer Arithmetic](link) ➗
+
+- Overview
+- Pointers and Arrays
+- Pointers and Strings
+
+## [13. Dynamic Memory Allocation](link) 🧱
+
+- Overview
+- malloc, calloc, and realloc
+
+## [14. Structures](link) 🏗️
+
+- Creating and using structures
+- Structures and arrays
+- Nested structures
+- Structures and pointers
+- Structures and functions
+
+## [15. File Input and Output](link) 📂
+
+- Overview
+- Accessing files
+- Reading from a file
+- Writing to a file
+- Finding your position in a file
+
+## [16. Standard C Library](link) 📚
+
+- Standard Header Files
+- Various Functions
+- Math Functions
+- Utility Functions
+
+## [17. Small Projects](link) 📚
+
+- Airline Reservation
+- Bank Management
+- Kalman Filter
+- Sensor Fusion

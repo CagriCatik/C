@@ -33,3 +33,6 @@
 # Build directories
 /build/
 /bin/
+
+# PDF files
+*.pdf
