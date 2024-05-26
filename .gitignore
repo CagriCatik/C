@@ -1,38 +1,69 @@
-# Compiled Object files
+# mdBooks
+# book
+
+# Compiled files
 *.o
-*.ko
-*.obj
-*.elf
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
+*.out
+*.exe
+*.dll
 *.so
 *.dylib
-*.dll
-
-# Compiled Static libraries
-*.lib
-*.a
 
 # Executables
-*.exe
-*.out
-*.app
+bin/
+out/
+
+# Object files
+obj/
+
+# Compiled headers
+*.gch
+
+# Libraries
+lib/
 
 # Temporary files
 *.swp
 *~
-\#*\#
 
-# Dependency files
-*.d
+# Visual Studio Code specific files
+.vscode/
 
-# Build directories
-/build/
-/bin/
+# Xcode specific files
+*.xcworkspace
+*.xcuserdatad
+*.xcproj/
 
-# PDF files
-*.pdf
+# JetBrains specific files
+.idea/
+*.iml
+
+# CMake build directory
+CMakeFiles/
+CMakeScripts/
+CMakeCache.txt
+
+# Custom build output directory
+build/
+
+# Ignore user-specific project settings
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore Unity build directory
+Library/
+Temp/
+Obj/
+UnityGenerated/
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+
