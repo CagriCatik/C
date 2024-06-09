@@ -128,6 +128,42 @@ This introductory guide, "C Programming," is designed to equip you with the fund
 - [Math Functions]()
 - [Utility Functions]()
 
-## [17. Small Projects](link) 📚
 
-- Text
+
+## [17. Working with Larger Programs]()
+
+## [18. Storage Classes]()
+
+## [19. Advanced Data Types]()
+
+## [20. Type Qualifiers]()
+
+## [21. Bit Manipulation]()
+
+## [22. Advanced Control Flow]()
+
+## [23. Input and Output]()
+
+## [24. Advanced Function Concepts]()
+
+## [25. Unions]()
+
+## [26. The Preprocessor]()
+
+## [27. Macros]()
+
+## [28. Advanced Debugging, Analysis, and Compiler Options]()
+
+## [29. Advanced Pointers]()
+
+## [30. Static Libraries and Shared Objects]()
+
+## [31. Useful C Libraries]()
+
+## [32. Data Structures]()
+
+## [33. Interprocess Communication and Signals]()
+
+## [34. Threads]()
+
+## [35. Networking (Sockets)]()
