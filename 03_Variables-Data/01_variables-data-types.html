@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Variables and Data Types - C Fundamentals</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../01_Introduction/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../01_Introduction/01_fundamentals.html"><strong aria-hidden="true">1.1.</strong> Fundamentals</a></li><li class="chapter-item expanded "><a href="../01_Introduction/02_overview.html"><strong aria-hidden="true">1.2.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../01_Introduction/03_features.html"><strong aria-hidden="true">1.3.</strong> Language Features</a></li><li class="chapter-item expanded "><a href="../01_Introduction/04_c-program.html"><strong aria-hidden="true">1.4.</strong> Creating a C Program</a></li></ol></li><li class="chapter-item expanded "><a href="../02_Basics/index.html"><strong aria-hidden="true">2.</strong> Basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../02_Basics/01_comments.html"><strong aria-hidden="true">2.1.</strong> Comments</a></li><li class="chapter-item expanded "><a href="../02_Basics/02_preprocessor.html"><strong aria-hidden="true">2.2.</strong> Preprocessor</a></li><li class="chapter-item expanded "><a href="../02_Basics/03_include-statement.html"><strong aria-hidden="true">2.3.</strong> Include Statement</a></li><li class="chapter-item expanded "><a href="../02_Basics/04_displaying-output.html"><strong aria-hidden="true">2.4.</strong> Displaying Output</a></li></ol></li><li class="chapter-item expanded "><a href="../03_Variables-Data/index.html"><strong aria-hidden="true">3.</strong> Variables and Data</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../03_Variables-Data/01_variables-data-types.html" class="active"><strong aria-hidden="true">3.1.</strong> Variables and Data Types</a></li><li class="chapter-item expanded "><a href="../03_Variables-Data/02_Data-Types.html"><strong aria-hidden="true">3.2.</strong> Data Types</a></li><li class="chapter-item expanded "><a href="../03_Variables-Data/03_enums-characters.html"><strong aria-hidden="true">3.3.</strong> Enums and Characters</a></li><li class="chapter-item expanded "><a href="../03_Variables-Data/04_Format-Specifiers.html"><strong aria-hidden="true">3.4.</strong> Format Specifiers</a></li><li class="chapter-item expanded "><a href="../03_Variables-Data/05_Command-Line-Arguments.html"><strong aria-hidden="true">3.5.</strong> Command Line Arguments</a></li></ol></li><li class="chapter-item expanded "><a href="../04_Operators/index.html"><strong aria-hidden="true">4.</strong> Operators</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../04_Operators/01_overview.html"><strong aria-hidden="true">4.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../04_Operators/02_basic-operators.html"><strong aria-hidden="true">4.2.</strong> Basic Operators</a></li><li class="chapter-item expanded "><a href="../04_Operators/03_assignment.html"><strong aria-hidden="true">4.3.</strong> Assignment</a></li><li class="chapter-item expanded "><a href="../04_Operators/04_bitwise-operators.html"><strong aria-hidden="true">4.4.</strong> Bitwise Operators</a></li><li class="chapter-item expanded "><a href="../04_Operators/05_cast-sizeof.html"><strong aria-hidden="true">4.5.</strong> Cast and sizeof</a></li><li class="chapter-item expanded "><a href="../04_Operators/06_assignment.html"><strong aria-hidden="true">4.6.</strong> Assignment</a></li><li class="chapter-item expanded "><a href="../04_Operators/07_operator-precedence.html"><strong aria-hidden="true">4.7.</strong> Operator Precedence</a></li></ol></li><li class="chapter-item expanded "><a href="../05_Control-Flow/index.html"><strong aria-hidden="true">5.</strong> Control Flow</a></li><li class="chapter-item expanded "><a href="../06_Arrays/index.html"><strong aria-hidden="true">6.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="../07_Functions/index.html"><strong aria-hidden="true">7.</strong> Functions</a></li><li class="chapter-item expanded "><a href="../08_Strings/index.html"><strong aria-hidden="true">8.</strong> Strings</a></li><li class="chapter-item expanded "><a href="../09_Debugging/index.html"><strong aria-hidden="true">9.</strong> Debugging</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../09_Debugging/01_debugging.html"><strong aria-hidden="true">9.1.</strong> Debugging</a></li><li class="chapter-item expanded "><a href="../09_Debugging/02_call-stack.html"><strong aria-hidden="true">9.2.</strong> Call Stack</a></li><li class="chapter-item expanded "><a href="../09_Debugging/03_common-mistakes.html"><strong aria-hidden="true">9.3.</strong> Common Mistakes</a></li><li class="chapter-item expanded "><a href="../09_Debugging/04_compiler-errors.html"><strong aria-hidden="true">9.4.</strong> Compiler Errors</a></li></ol></li><li class="chapter-item expanded "><a href="../10_Pointer-Basics/index.html"><strong aria-hidden="true">10.</strong> Pointer Basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10_Pointer-Basics/01_overview.html"><strong aria-hidden="true">10.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../10_Pointer-Basics/02_defining-pointers.html"><strong aria-hidden="true">10.2.</strong> Defining Pointers</a></li><li class="chapter-item expanded "><a href="../10_Pointer-Basics/03_accessing-pointers.html"><strong aria-hidden="true">10.3.</strong> Accessing Pointers</a></li><li class="chapter-item expanded "><a href="../10_Pointer-Basics/04_assignment.html"><strong aria-hidden="true">10.4.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="../11_Utilizing-Pointer/index.html"><strong aria-hidden="true">11.</strong> Utilizing Pointers</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../11_Utilizing-Pointer/01_overview.html"><strong aria-hidden="true">11.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../11_Utilizing-Pointer/02_pointers-const.html"><strong aria-hidden="true">11.2.</strong> Pointers and const</a></li><li class="chapter-item expanded "><a href="../11_Utilizing-Pointer/03_pointers-arrays.html"><strong aria-hidden="true">11.3.</strong> Pointers and Arrays</a></li><li class="chapter-item expanded "><a href="../11_Utilizing-Pointer/04_passing-pointer-to-function.html"><strong aria-hidden="true">11.4.</strong> Passing Pointer to Function</a></li><li class="chapter-item expanded "><a href="../11_Utilizing-Pointer/05_assignment.html"><strong aria-hidden="true">11.5.</strong> Assignment</a></li></ol></li><li class="chapter-item expanded "><a href="../12_Pointer-Arithmetic/index.html"><strong aria-hidden="true">12.</strong> Pointer Arithmetic</a></li><li class="chapter-item expanded "><a href="../13_Dynamic-Memory/index.html"><strong aria-hidden="true">13.</strong> Dynamic Memory</a></li><li class="chapter-item expanded "><a href="../14_Structures/index.html"><strong aria-hidden="true">14.</strong> Structures</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../14_Structures/01_create-using-structures.html"><strong aria-hidden="true">14.1.</strong> Creating and Using Structures</a></li></ol></li><li class="chapter-item expanded "><a href="../15_File-Input-Output/index.html"><strong aria-hidden="true">15.</strong> File Input Output</a></li><li class="chapter-item expanded "><a href="../16_Standard-Library/index.html"><strong aria-hidden="true">16.</strong> Standard Library</a></li><li class="chapter-item expanded "><a href="../17_/index.html"><strong aria-hidden="true">17.</strong> Working with Larger Programs</a></li><li class="chapter-item expanded "><a href="../18_/index.html"><strong aria-hidden="true">18.</strong> Storage Classes</a></li><li class="chapter-item expanded "><a href="../19_/index.html"><strong aria-hidden="true">19.</strong> Advanced Data Types</a></li><li class="chapter-item expanded "><a href="../20_/index.html"><strong aria-hidden="true">20.</strong> Type Qualifiers</a></li><li class="chapter-item expanded "><a href="../21_/index.html"><strong aria-hidden="true">21.</strong> Bit Manipulation</a></li><li class="chapter-item expanded "><a href="../22_/index.html"><strong aria-hidden="true">22.</strong> Advanced Control Flow</a></li><li class="chapter-item expanded "><a href="../23_/index.html"><strong aria-hidden="true">23.</strong> Input and Output</a></li><li class="chapter-item expanded "><a href="../24_/index.html"><strong aria-hidden="true">24.</strong> Advanced Function Concepts</a></li><li class="chapter-item expanded "><a href="../25_/index.html"><strong aria-hidden="true">25.</strong> Unions</a></li><li class="chapter-item expanded "><a href="../26_/index.html"><strong aria-hidden="true">26.</strong> The Preprocessor</a></li><li class="chapter-item expanded "><a href="../27_/index.html"><strong aria-hidden="true">27.</strong> Macros</a></li><li class="chapter-item expanded "><a href="../28_/index.html"><strong aria-hidden="true">28.</strong> Advanced Debugging, Analysis, and Compiler Options</a></li><li class="chapter-item expanded "><a href="../29_/index.html"><strong aria-hidden="true">29.</strong> Advanced Pointers</a></li><li class="chapter-item expanded "><a href="../30_/index.html"><strong aria-hidden="true">30.</strong> Static Libraries and Shared Objects</a></li><li class="chapter-item expanded "><a href="../31_/index.html"><strong aria-hidden="true">31.</strong> Useful C Libraries</a></li><li class="chapter-item expanded "><a href="../32_/index.html"><strong aria-hidden="true">32.</strong> Data Structures</a></li><li class="chapter-item expanded "><a href="../33_/index.html"><strong aria-hidden="true">33.</strong> Interprocess Communication and Signals</a></li><li class="chapter-item expanded "><a href="../34_/index.html"><strong aria-hidden="true">34.</strong> Threads</a></li><li class="chapter-item expanded "><a href="../35_/index.html"><strong aria-hidden="true">35.</strong> Networking (Sockets)</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">C Fundamentals</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../03_Variables-Data/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../03_Variables-Data/02_Data-Types.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../03_Variables-Data/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../03_Variables-Data/02_Data-Types.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
