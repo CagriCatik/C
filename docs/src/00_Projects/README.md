@@ -1,10 +1,11 @@
 # Projects
 
 1. Bank management system
-3. Airlines reservation system
-4. Vaccine registration portal
-5. A calculator
-6. Tic toe game
+2. Airlines reservation system
+3. Vaccine registration portal
+4. A calculator
+5. Tic toe game
+6. RRT
 7. Password management system
 8. Phone book management system
 9. Snake and ladders game
