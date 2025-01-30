@@ -1,0 +1,68 @@
+/**
+ * Global CSS with C language-inspired colors.
+ */
+
+ :root {
+  --ifm-color-primary: #00599C; /* C logo blue */
+  --ifm-color-primary-dark: #00457A;
+  --ifm-color-primary-darker: #003A66;
+  --ifm-color-primary-darkest: #002B4D;
+  --ifm-color-primary-light: #0074C4;
+  --ifm-color-primary-lighter: #1A8DD8;
+  --ifm-color-primary-lightest: #4AA9E3;
+
+  --navbar-bg-color: #00599C; /* Unified color with header */
+  --navbar-text-color: #ffffff;
+  --navbar-hover-bg-color: #00457A;
+  --navbar-active-color: #FFD700; /* Highlight color */
+
+  --header-bg-color: #0074C4; /* Unified header color */
+  --header-text-color: #ffffff;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 89, 156, 0.1);
+}
+
+/* Dark mode colors inspired by a lighter blue palette */
+[data-theme='dark'] {
+  --ifm-color-primary: #4AA9E3; /* Lighter C logo blue */
+  --ifm-color-primary-dark: #3A8CC0;
+  --ifm-color-primary-darker: #3278A6;
+  --ifm-color-primary-darkest: #285C7E;
+  --ifm-color-primary-light: #5EC2FF;
+  --ifm-color-primary-lighter: #75CEFF;
+  --ifm-color-primary-lightest: #A3E2FF;
+
+  --navbar-bg-color: #1A1A1A; /* Dark mode navbar */
+  --navbar-text-color: #ffffff;
+  --navbar-hover-bg-color: #3278A6;
+  --navbar-active-color: #FFC107;
+
+  --header-bg-color: #4AA9E3;
+  --header-text-color: #ffffff;
+
+  --docusaurus-highlighted-code-line-bg: rgba(74, 169, 227, 0.3);
+}
+
+.navbar {
+  height: 100px; /* Increased height */
+  padding: 0 20px;
+  background-color: var(--navbar-bg-color);
+  color: var(--navbar-text-color);
+}
+
+.navbar__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navbar__link--active {
+  color: var(--navbar-active-color);
+}
+
+.navbar__logo {
+  height: 40px;
+  width: auto;
+}

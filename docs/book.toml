@@ -1,9 +1,0 @@
-[book]
-authors = ["Çağrı"]
-language = "en"
-multilingual = false
-src = "src"
-title = "C Fundamentals"
-
-[build]
-build-dir = "book"

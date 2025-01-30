@@ -1,1 +1,0 @@
-# Local and Global Variables
